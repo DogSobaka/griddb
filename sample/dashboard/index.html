@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header class="header card">
+      <div class="search-block">
+        <label class="search-label" for="dashboard-search">Input label type to search</label>
+        <div class="search-field">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 001.57-4.23 6.5 6.5 0 10-6.5 6.5 6.471 6.471 0 004.23-1.57l.27.28v.79l4.25 4.25a1 1 0 101.41-1.41L15.5 14zM10.5 14a4.5 4.5 0 110-9 4.5 4.5 0 010 9z"/></svg>
+          <input id="dashboard-search" type="search" placeholder="Поиск клиентов, транзакций или каналов" autocomplete="off">
+          <span class="badge" aria-label="26 new updates">26</span>
+        </div>
+      </div>
+      <button class="btn primary">Connect New Account</button>
+      <h1>Hey Mariana — here’s what’s happening with your store today</h1>
+    </header>
+
+    <main class="main-grid">
+      <div class="primary-column">
+        <section class="stats-grid">
+          <article class="stat card">
+            <header>
+              <p class="stat-title">Today’s Sale</p>
+              <span class="stat-chip">Analytics</span>
+            </header>
+            <p class="stat-value">$12,426</p>
+            <p class="stat-change positive">+ 36%</p>
+          </article>
+          <article class="stat card">
+            <header>
+              <p class="stat-title">Total Sales</p>
+              <span class="stat-chip">Insight</span>
+            </header>
+            <p class="stat-value">$2,38,485</p>
+            <p class="stat-change positive">+ 14%</p>
+          </article>
+          <article class="stat card">
+            <header>
+              <p class="stat-title">Total Orders</p>
+              <span class="stat-chip">Hot</span>
+            </header>
+            <p class="stat-value">84,382</p>
+            <p class="stat-change positive">+ 36%</p>
+          </article>
+          <article class="stat card">
+            <header>
+              <p class="stat-title">Total Customers</p>
+              <span class="stat-chip">Growth</span>
+            </header>
+            <p class="stat-value">33,493</p>
+            <p class="stat-change positive">+ 36%</p>
+          </article>
+        </section>
+
+        <section class="card performance" aria-labelledby="performance-heading">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">Performance</p>
+              <h2 id="performance-heading">Sales Report</h2>
+            </div>
+            <div class="chip-group" role="group" aria-label="Период отчёта">
+              <button type="button" class="chip" aria-pressed="true">12 Months</button>
+              <button type="button" class="chip" aria-pressed="false">6 Months</button>
+              <button type="button" class="chip" aria-pressed="false">30 Days</button>
+              <button type="button" class="chip" aria-pressed="false">7 Days</button>
+            </div>
+            <button class="btn ghost">Export PDF</button>
+          </header>
+          <div class="chart">
+            <div class="chart-legend">
+              <span class="dot primary"></span>
+              <span>Hotjar <span class="tag">NEW</span></span>
+            </div>
+            <div class="chart-bars" role="img" aria-label="Продажи по месяцам">
+              <div class="bar" data-month="Feb" style="--value: 60%"></div>
+              <div class="bar" data-month="Mar" style="--value: 75%"></div>
+              <div class="bar" data-month="Apr" style="--value: 55%"></div>
+              <div class="bar" data-month="May" style="--value: 90%"></div>
+              <div class="bar" data-month="Jun" style="--value: 78%"></div>
+              <div class="bar" data-month="Jul" style="--value: 68%"></div>
+              <div class="bar" data-month="Aug" style="--value: 82%"></div>
+              <div class="bar" data-month="Sep" style="--value: 57%"></div>
+              <div class="bar" data-month="Oct" style="--value: 88%"></div>
+              <div class="bar" data-month="Nov" style="--value: 64%"></div>
+              <div class="bar" data-month="Dec" style="--value: 92%"></div>
+              <div class="bar" data-month="Jan" style="--value: 73%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card transactions" aria-labelledby="transactions-heading">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">Transactions</p>
+              <h2 id="transactions-heading">See All Transactions</h2>
+            </div>
+            <a class="link" href="#recent-customers">Recent Customers</a>
+          </header>
+          <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipis. Lorem ipsum dolor sit ametis.</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Source</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Method</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-search="amazon completed visa 4831 card payment 182.94 jan 17 2022">
+                  <td>
+                    <span class="table-title">Amazon</span>
+                    <span class="table-subtitle">Visa card •••• 4831</span>
+                  </td>
+                  <td><span class="status success">Completed</span></td>
+                  <td>Visa card •••• 4831</td>
+                  <td>$182.94</td>
+                  <td>Card payment</td>
+                  <td>Jan 17, 2022</td>
+                </tr>
+                <tr data-search="facebook completed mastercard 6442 card payment 99.00 jan 17 2022">
+                  <td>
+                    <span class="table-title">Facebook</span>
+                    <span class="table-subtitle">Mastercard •••• 6442</span>
+                  </td>
+                  <td><span class="status success">Completed</span></td>
+                  <td>Mastercard •••• 6442</td>
+                  <td>$99.00</td>
+                  <td>Card payment</td>
+                  <td>Jan 17, 2022</td>
+                </tr>
+                <tr data-search="netflix pending account 882 bank payment 249.94 jan 17 2022">
+                  <td>
+                    <span class="table-title">Netflix</span>
+                    <span class="table-subtitle">Account 882</span>
+                  </td>
+                  <td><span class="status warning">Pending</span></td>
+                  <td>Account 882</td>
+                  <td>$249.94</td>
+                  <td>Bank payment</td>
+                  <td>Jan 17, 2022</td>
+                </tr>
+                <tr data-search="amazon prime canceled amex 5666 card payment 199.24 jan 17 2022">
+                  <td>
+                    <span class="table-title">Amazon Prime</span>
+                    <span class="table-subtitle">Amex card •••• 5666</span>
+                  </td>
+                  <td><span class="status danger">Canceled</span></td>
+                  <td>Amex card •••• 5666</td>
+                  <td>$199.24</td>
+                  <td>Card payment</td>
+                  <td>Jan 17, 2022</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <aside class="secondary-column">
+        <section class="card sales" aria-labelledby="sales-heading">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">Dashboard</p>
+              <h2 id="sales-heading">Today’s Sale Overview</h2>
+            </div>
+            <span class="tag tone-green">+ 36%</span>
+          </header>
+          <div class="sales-summary">
+            <div>
+              <p class="summary-label">Total Sales</p>
+              <p class="summary-value">$2,38,485</p>
+            </div>
+            <div>
+              <p class="summary-label">Total Orders</p>
+              <p class="summary-value">84,382</p>
+            </div>
+          </div>
+          <div class="sales-footer">
+            <div>
+              <p class="summary-label">Total Customers</p>
+              <p class="summary-value">33,493</p>
+            </div>
+            <div>
+              <p class="summary-label">Average order</p>
+              <p class="summary-value">$45,591</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card traffic" aria-labelledby="traffic-heading">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">Traffic Sources</p>
+              <h2 id="traffic-heading">Last 7 Days</h2>
+            </div>
+          </header>
+          <ul class="traffic-list">
+            <li data-search="direct traffic 143382">
+              <span class="dot primary"></span>
+              <span class="traffic-label">Direct</span>
+              <span class="traffic-value">1,43,382</span>
+            </li>
+            <li data-search="referral traffic 87974">
+              <span class="dot violet"></span>
+              <span class="traffic-label">Referral</span>
+              <span class="traffic-value">87,974</span>
+            </li>
+            <li data-search="social media traffic 45211">
+              <span class="dot orange"></span>
+              <span class="traffic-label">Social Media</span>
+              <span class="traffic-value">45,211</span>
+            </li>
+          </ul>
+          <section class="support" aria-labelledby="support-heading">
+            <header>
+              <h3 id="support-heading">Support</h3>
+              <span class="support-subtitle">June 2021</span>
+            </header>
+            <div class="support-total">$45,591</div>
+            <dl class="support-metrics">
+              <div>
+                <dt>Tickets</dt>
+                <dd>15</dd>
+              </div>
+              <div>
+                <dt>Agents</dt>
+                <dd>Shop</dd>
+              </div>
+              <div>
+                <dt>Customers</dt>
+                <dd>Twitter · 21,893</dd>
+              </div>
+              <div>
+                <dt>Products</dt>
+                <dd>Settings</dd>
+              </div>
+            </dl>
+          </section>
+        </section>
+
+        <section class="card customers" id="recent-customers" aria-labelledby="customers-heading">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">See All Customers</p>
+              <h2 id="customers-heading">Recent Customers</h2>
+            </div>
+            <button class="btn ghost">Logout</button>
+          </header>
+          <ul class="customer-list">
+            <li class="customer" data-search="jenny wilson amazon completed visa 4831 card payment jan 17 2022 w.lawson@example.com austin 11234">
+              <div class="customer-main">
+                <div>
+                  <p class="customer-name">Jenny Wilson</p>
+                  <p class="customer-channel">Amazon</p>
+                </div>
+                <span class="status success">Completed</span>
+              </div>
+              <div class="customer-details">
+                <span class="amount">$11,234</span>
+                <span>Visa card •••• 4831</span>
+                <span>Card payment · Jan 17, 2022</span>
+              </div>
+              <div class="customer-meta">
+                <span>w.lawson@example.com</span>
+                <span>Austin</span>
+              </div>
+            </li>
+            <li class="customer" data-search="devon lane facebook completed mastercard 6442 card payment jan 17 2022 dat.roberts@example.com new york 11159">
+              <div class="customer-main">
+                <div>
+                  <p class="customer-name">Devon Lane</p>
+                  <p class="customer-channel">Facebook</p>
+                </div>
+                <span class="status success">Completed</span>
+              </div>
+              <div class="customer-details">
+                <span class="amount">$11,159</span>
+                <span>Mastercard •••• 6442</span>
+                <span>Card payment · Jan 17, 2022</span>
+              </div>
+              <div class="customer-meta">
+                <span>dat.roberts@example.com</span>
+                <span>New York</span>
+              </div>
+            </li>
+            <li class="customer" data-search="jane cooper netflix pending bank payment account 882 jan 17 2022 jgraham@example.com toledo 10483">
+              <div class="customer-main">
+                <div>
+                  <p class="customer-name">Jane Cooper</p>
+                  <p class="customer-channel">Netflix</p>
+                </div>
+                <span class="status warning">Pending</span>
+              </div>
+              <div class="customer-details">
+                <span class="amount">$10,483</span>
+                <span>Account 882</span>
+                <span>Bank payment · Jan 17, 2022</span>
+              </div>
+              <div class="customer-meta">
+                <span>jgraham@example.com</span>
+                <span>Toledo</span>
+              </div>
+            </li>
+            <li class="customer" data-search="dianne russell amazon prime canceled amex 5666 card payment jan 17 2022 curtis.d@example.com naperville 9084">
+              <div class="customer-main">
+                <div>
+                  <p class="customer-name">Dianne Russell</p>
+                  <p class="customer-channel">Amazon Prime</p>
+                </div>
+                <span class="status danger">Canceled</span>
+              </div>
+              <div class="customer-details">
+                <span class="amount">$9,084</span>
+                <span>Amex card •••• 5666</span>
+                <span>Card payment · Jan 17, 2022</span>
+              </div>
+              <div class="customer-meta">
+                <span>curtis.d@example.com</span>
+                <span>Naperville</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
